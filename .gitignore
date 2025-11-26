@@ -1,0 +1,42 @@
+# Laravel defaults
+/vendor/
+/node_modules/
+.env
+.env.backup
+.phpunit.result.cache
+/public/storage
+/storage/*.key
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+
+# Laravel Telescope
+storage/debugbar/*
+
+# GraphQL / Lighthouse
+bootstrap/cache/lighthouse-*
+/storage/lighthouse/schema-*.php
+/storage/lighthouse/temp/*
+/storage/lighthouse/cache/*
+/public/graphql-docs/*
+
+# Composer / NPM
+composer.phar
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+package-lock.json
+yarn.lock
+
+# IDE / editor files
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing / coverage
+coverage/
+.phpunit.result.cache
