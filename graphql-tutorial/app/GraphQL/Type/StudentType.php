@@ -9,7 +9,7 @@ class StudentType extends GraphQLType
     protected $attributes = [
         'name' => 'Student',
         'description' => 'A student',
-        'model' => \App\Student::class
+        'model' => \App\Models\Student::class
     ];
 
     public function fields(): array

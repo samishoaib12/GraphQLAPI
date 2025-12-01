@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::any('/graphql/test', function() {
+    return 'GraphQL route hit';
+});

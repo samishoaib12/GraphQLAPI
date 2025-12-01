@@ -12,7 +12,7 @@ protected $attributes = [
 
 public function type(): Type
 {
-    return GraphQL::type('student');
+    return GraphQL::type('Student');
 }
 
 public function args(): array

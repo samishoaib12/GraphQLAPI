@@ -13,7 +13,7 @@ class StudentsQuery extends Query
 
     public function type(): Type
     {
-        return Type::listOf(GraphQL::type('student'));
+        return Type::listOf(GraphQL::type('Student'));
     }
 
     public function args(): array

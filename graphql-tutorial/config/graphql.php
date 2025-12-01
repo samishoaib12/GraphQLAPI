@@ -1,13 +1,11 @@
 <?php
 
-
 declare(strict_types = 1);
 
 return [
     'route' => [
         // The prefix for routes; do NOT use a leading slash!
         'prefix' => 'graphql',
-        
 
         // The controller/method to use in GraphQL request.
         // Also supported array syntax: `[\Rebing\GraphQL\GraphQLController::class, 'query']`
@@ -25,28 +23,6 @@ return [
         //
         'group_attributes' => [],
     ],
-
-
-    'schemas' => [
-        'default' => [
-                'query' => [
-                        'students' => App\GraphQL\Query\StudentsQuery::class,
-                ],
-                'mutation' => [
-                        // Create a student
-                        'createStudent' => App\GraphQL\Mutation\CreateStudentMutation::class,
-                        // update student
-                        'updateStudent' => App\GraphQL\Mutation\UpdateStudentMutation::class,
-                        // delete a student
-                        'deleteStudent' => App\GraphQL\Mutation\DeleteStudentMutation::class,
-                ],
-                'middleware' => [],
-                'method' => ['get', 'post'],
-        ],
-],
-'types' => [
-        'Student' => App\GraphQL\Type\StudentType::class,
-],
 
     // The name of the default schema
     // Used when the route group is directly accessed
@@ -96,7 +72,28 @@ return [
     //      ],
     //  ]
     //
+    'schemas' => [
+        'default' => [
+            'query' => [
+               'students' => App\GraphQL\Query\StudentsQuery::class,
+            ],
+            'mutation' => [
+               'createStudent' => App\GraphQL\Mutation\CreateStudentMutation::class,
+                'updateStudent' => App\GraphQL\Mutation\UpdateStudentMutation::class,
+                'deleteStudent' => App\GraphQL\Mutation\DeleteStudentMutation::class,
+            ],
+            // The types only available in this schema
+          
+            // Laravel HTTP middleware
+            'middleware' => null,
 
+            // Which HTTP methods to support; must be given in UPPERCASE!
+            'method' => ['GET', 'POST'],
+
+            // An array of middlewares, overrides the global ones
+            'execution_middleware' => null,
+        ],
+    ],
 
     // The global types available to all schemas.
     // You can then access it from the facade like this: GraphQL::type('user')
@@ -107,7 +104,12 @@ return [
     //     App\GraphQL\Types\UserType::class
     // ]
     //
-  
+    'types' => [
+        // ExampleType::class,
+        // ExampleRelationType::class,
+        // \Rebing\GraphQL\Support\UploadType::class,
+          'Student' => App\GraphQL\Type\StudentType::class
+    ],
 
     // This callable will be passed the Error object for each errors GraphQL catch.
     // The method should return an array representing the error.
@@ -217,5 +219,4 @@ return [
      * Globally registered ResolverMiddleware
      */
     'resolver_middleware_append' => null,
-
 ];
