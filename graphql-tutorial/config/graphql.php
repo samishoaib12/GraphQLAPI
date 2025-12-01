@@ -1,5 +1,6 @@
 <?php
 
+
 declare(strict_types = 1);
 
 return [
@@ -29,22 +30,22 @@ return [
     'schemas' => [
         'default' => [
                 'query' => [
-                        'students' => App\GraphQL\Queries\StudentsQuery::class,
+                        'students' => App\GraphQL\Query\StudentsQuery::class,
                 ],
                 'mutation' => [
                         // Create a student
-                        'createStudent' => App\GraphQL\Mutations\CreateStudentMutation::class,
+                        'createStudent' => App\GraphQL\Mutation\CreateStudentMutation::class,
                         // update student
-                        'updateStudent' => App\GraphQL\Mutations\UpdateStudentMutation::class,
+                        'updateStudent' => App\GraphQL\Mutation\UpdateStudentMutation::class,
                         // delete a student
-                        'deleteStudent' => App\GraphQL\Mutations\DeleteStudentMutation::class,
+                        'deleteStudent' => App\GraphQL\Mutation\DeleteStudentMutation::class,
                 ],
                 'middleware' => [],
                 'method' => ['get', 'post'],
         ],
 ],
 'types' => [
-        'Student' => App\GraphQL\Types\StudentType::class,
+        'Student' => App\GraphQL\Type\StudentType::class,
 ],
 
     // The name of the default schema

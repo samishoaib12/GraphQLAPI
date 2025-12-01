@@ -1,6 +1,6 @@
-
 <?php
-
+namespace App\GraphQL\Query;
+use App\Models\Student;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Query;

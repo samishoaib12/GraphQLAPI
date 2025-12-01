@@ -1,6 +1,6 @@
 <?php
-
-use App\Student;
+namespace App\GraphQL\Mutation;
+use App\Models\Student;
 use Rebing\GraphQL\Support\Facades\GraphQL;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Mutation;

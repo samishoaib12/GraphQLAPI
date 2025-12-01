@@ -1,6 +1,6 @@
 <?php
 namespace App\graphql\Mutations;
-use App\Student;
+use App\Models\Student;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Mutation;
 class DeleteStudentMutation extends Mutation
