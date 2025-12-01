@@ -18,10 +18,10 @@ public function type(): Type
 public function args(): array
 {
     return [
-        "id" => [
-            'name' => 'id',
-            'type' => Type::nonNull(Type::int()),
-        ],
+        // "id" => [
+        //     'name' => 'id',
+        //     'type' => Type::nonNull(Type::int()),
+        // ],
         'name' => [
             'name' => 'name',
             'type' => Type::nonNull(Type::string())
